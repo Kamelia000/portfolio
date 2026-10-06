@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Kamelia Mahmoud — Software Engineer Portfolio">
+  <meta name="theme-color" content="#08090d">
   <title>Kamelia Mahmoud | Software Engineer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,13 +15,19 @@
 </head>
 
 <body>
-  <div class="cursor-glow"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
 
   <header class="header" id="header">
-    <nav class="navbar container">
+    <nav class="navbar container" aria-label="Main navigation">
       <a href="#home" class="logo"><span>K</span>amelia.</a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
         <span></span><span></span><span></span>
       </button>
 
@@ -40,7 +47,7 @@
   <main>
     <!-- HERO -->
     <section class="hero section" id="home">
-      <div class="hero-bg">
+      <div class="hero-bg" aria-hidden="true">
         <div class="orb orb-1"></div>
         <div class="orb orb-2"></div>
         <div class="grid-lines"></div>
@@ -48,7 +55,10 @@
 
       <div class="container hero-content">
         <div class="hero-copy reveal">
-          <p class="eyebrow"><span class="status-dot"></span> AVAILABLE FOR OPPORTUNITIES</p>
+          <p class="eyebrow">
+            <span class="status-dot"></span>
+            AVAILABLE FOR OPPORTUNITIES
+          </p>
 
           <h1>Building digital<br><span>experiences</span> with code.</h1>
 
@@ -69,30 +79,148 @@
           </div>
         </div>
 
+        <!-- ADVANCED DEVELOPER CARD -->
         <div class="hero-visual reveal">
           <div class="code-card">
             <div class="code-top">
-              <div class="window-dots"><i></i><i></i><i></i></div>
-              <span>developer.js</span>
+              <div class="window-dots">
+                <i></i><i></i><i></i>
+              </div>
+
+              <div class="editor-title">
+                <span class="file-icon">{ }</span>
+                <span>developer.js</span>
+              </div>
+
+              <span class="editor-status">
+                <span class="live-dot"></span>
+                LIVE
+              </span>
             </div>
+
+            <div class="code-tabs">
+              <span class="code-tab active">developer.js</span>
+              <span class="code-tab">portfolio</span>
+            </div>
+
             <div class="code-body">
-              <p><span class="purple">const</span> developer = {</p>
-              <p class="indent"><span class="blue">name</span>: <span class="green">'Kamelia'</span>,</p>
-              <p class="indent"><span class="blue">role</span>: <span class="green">'Software Engineer'</span>,</p>
-              <p class="indent"><span class="blue">focus</span>: [</p>
-              <p class="indent-2"><span class="green">'Full-Stack'</span>,</p>
-              <p class="indent-2"><span class="green">'Backend'</span>,</p>
-              <p class="indent-2"><span class="green">'Web Development'</span></p>
-              <p class="indent">],</p>
-              <p class="indent"><span class="blue">passion</span>: <span class="green">'Building & Learning'</span></p>
-              <p>};</p>
-              <p class="comment">// Let's build something great.</p>
-              <span class="code-cursor">|</span>
+              <div class="code-line">
+                <span class="line-number">01</span>
+                <span class="purple">const</span>
+                <span class="blue">developer</span>
+                <span class="white">=</span>
+                <span class="white">{</span>
+              </div>
+
+              <div class="code-line">
+                <span class="line-number">02</span>
+                <span class="property">name</span>
+                <span class="white">:</span>
+                <span class="green">'Kamelia Mahmoud'</span><span class="white">,</span>
+              </div>
+
+              <div class="code-line">
+                <span class="line-number">03</span>
+                <span class="property">role</span>
+                <span class="white">:</span>
+                <span class="green">'Software Engineer'</span><span class="white">,</span>
+              </div>
+
+              <div class="code-line">
+                <span class="line-number">04</span>
+                <span class="property">focus</span>
+                <span class="white">:</span>
+                <span class="white">[</span>
+              </div>
+
+              <div class="code-line indent">
+                <span class="line-number">05</span>
+                <span class="green">'Full-Stack Development'</span><span class="white">,</span>
+              </div>
+
+              <div class="code-line indent">
+                <span class="line-number">06</span>
+                <span class="green">'Backend Development'</span><span class="white">,</span>
+              </div>
+
+              <div class="code-line indent">
+                <span class="line-number">07</span>
+                <span class="green">'Modern Web Applications'</span>
+              </div>
+
+              <div class="code-line">
+                <span class="line-number">08</span>
+                <span class="white">],</span>
+              </div>
+
+              <div class="code-line">
+                <span class="line-number">09</span>
+                <span class="property">stack</span>
+                <span class="white">:</span>
+                <span class="white">{</span>
+              </div>
+
+              <div class="code-line indent">
+                <span class="line-number">10</span>
+                <span class="property">frontend</span>
+                <span class="white">:</span>
+                <span class="green">'React'</span><span class="white">,</span>
+              </div>
+
+              <div class="code-line indent">
+                <span class="line-number">11</span>
+                <span class="property">backend</span>
+                <span class="white">:</span>
+                <span class="green">'Node.js / FastAPI'</span><span class="white">,</span>
+              </div>
+
+              <div class="code-line indent">
+                <span class="line-number">12</span>
+                <span class="property">database</span>
+                <span class="white">:</span>
+                <span class="green">'MongoDB / SQL'</span>
+              </div>
+
+              <div class="code-line">
+                <span class="line-number">13</span>
+                <span class="white">},</span>
+              </div>
+
+              <div class="code-line">
+                <span class="line-number">14</span>
+                <span class="property">mindset</span>
+                <span class="white">:</span>
+                <span class="green">'Build. Learn. Improve.'</span>
+              </div>
+
+              <div class="code-line">
+                <span class="line-number">15</span>
+                <span class="white">};</span>
+              </div>
+
+              <div class="code-comment">
+                <span class="line-number">16</span>
+                <span>// Turning ideas into reliable software.</span>
+              </div>
+
+              <span class="code-cursor">▋</span>
+            </div>
+
+            <div class="code-footer">
+              <span><span class="footer-dot"></span> Ready</span>
+              <span>JavaScript</span>
+              <span>UTF-8</span>
+              <span>Ln 16, Col 1</span>
             </div>
           </div>
 
-          <div class="floating-card card-one"><span>⚡</span> Problem Solver</div>
-          <div class="floating-card card-two"><span>⌘</span> Software Engineer</div>
+          <div class="floating-card card-one">
+            <span>⚡</span> Problem Solver
+          </div>
+
+          <div class="floating-card card-two">
+            <span>⌘</span> Software Engineer
+          </div>
         </div>
       </div>
 
@@ -114,6 +242,7 @@
               with a strong foundation in software engineering principles, object-oriented
               programming, data structures, algorithms, databases and software testing.
             </p>
+
             <p>
               My main career direction is <strong>Full-Stack and Backend Development</strong>.
               I enjoy turning ideas into practical applications, designing clean solutions,
@@ -134,10 +263,12 @@
               <span class="info-icon">⌁</span>
               <div><small>EDUCATION</small><strong>BUE</strong><p>Software Engineering</p></div>
             </div>
+
             <div class="info-box">
               <span class="info-icon">◈</span>
               <div><small>CLASSIFICATION</small><strong>Very Good</strong><p>With Honors</p></div>
             </div>
+
             <div class="info-box">
               <span class="info-icon">◎</span>
               <div><small>LOCATION</small><strong>Cairo, Egypt</strong><p>New Cairo / Fifth Settlement</p></div>
@@ -163,18 +294,22 @@
               <div class="skill-info"><span>Java</span><strong>85%</strong></div>
               <div class="progress"><span data-width="85%"></span></div>
             </div>
+
             <div class="skill-item">
               <div class="skill-info"><span>JavaScript</span><strong>82%</strong></div>
               <div class="progress"><span data-width="82%"></span></div>
             </div>
+
             <div class="skill-item">
               <div class="skill-info"><span>Python</span><strong>78%</strong></div>
               <div class="progress"><span data-width="78%"></span></div>
             </div>
+
             <div class="skill-item">
               <div class="skill-info"><span>HTML5 / CSS3</span><strong>90%</strong></div>
               <div class="progress"><span data-width="90%"></span></div>
             </div>
+
             <div class="skill-item">
               <div class="skill-info"><span>SQL</span><strong>80%</strong></div>
               <div class="progress"><span data-width="80%"></span></div>
@@ -189,7 +324,7 @@
               <div class="tech-card"><b>Node.js</b><span>Backend</span></div>
               <div class="tech-card"><b>FastAPI</b><span>Backend</span></div>
               <div class="tech-card"><b>MongoDB</b><span>Database</span></div>
-              <div class="tech-card"><b>Flutter</b><span>Web / UI</span></div>
+              <div class="tech-card"><b>Flutter</b><span>UI / Application</span></div>
               <div class="tech-card"><b>Three.js</b><span>3D Web</span></div>
             </div>
           </div>
@@ -198,10 +333,18 @@
             <div class="panel-title"><span>03</span><h3>Engineering Skills</h3></div>
 
             <div class="pill-list">
-              <span>OOP</span><span>Data Structures</span><span>Algorithms</span>
-              <span>Problem Solving</span><span>Database Systems</span><span>REST APIs</span>
-              <span>Software Testing</span><span>Git / GitHub</span><span>Debugging</span>
-              <span>Responsive Design</span><span>API Integration</span><span>MVVM</span>
+              <span>OOP</span>
+              <span>Data Structures</span>
+              <span>Algorithms</span>
+              <span>Problem Solving</span>
+              <span>Database Systems</span>
+              <span>REST APIs</span>
+              <span>Software Testing</span>
+              <span>Git / GitHub</span>
+              <span>Debugging</span>
+              <span>Responsive Design</span>
+              <span>API Integration</span>
+              <span>MVVM</span>
             </div>
           </div>
 
@@ -241,7 +384,9 @@
                 Sign Language animations, combining a Flutter Web interface, FastAPI
                 backend, speech processing and a Three.js 3D avatar.
               </p>
-              <div class="project-tech"><span>FastAPI</span><span>Flutter</span><span>Three.js</span><span>Python</span><span>PyTorch</span></div>
+              <div class="project-tech">
+                <span>FastAPI</span><span>Flutter</span><span>Three.js</span><span>Python</span><span>PyTorch</span>
+              </div>
             </div>
             <div class="project-arrow">↗</div>
           </article>
@@ -255,7 +400,9 @@
                 Responsive React application that consumes external weather APIs,
                 displays current conditions and forecasts, and handles API errors.
               </p>
-              <div class="project-tech"><span>React</span><span>JavaScript</span><span>REST API</span><span>CSS</span></div>
+              <div class="project-tech">
+                <span>React</span><span>JavaScript</span><span>REST API</span><span>CSS</span>
+              </div>
             </div>
             <div class="project-arrow">↗</div>
           </article>
@@ -269,7 +416,9 @@
                 E-commerce focused web application built while practicing modern
                 frontend, backend and database development workflows.
               </p>
-              <div class="project-tech"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+              <div class="project-tech">
+                <span>React</span><span>Node.js</span><span>MongoDB</span>
+              </div>
             </div>
             <div class="project-arrow">↗</div>
           </article>
@@ -283,7 +432,9 @@
                 A Java-based distributed application demonstrating Remote Method
                 Invocation and client-server communication concepts.
               </p>
-              <div class="project-tech"><span>Java</span><span>RMI</span><span>OOP</span></div>
+              <div class="project-tech">
+                <span>Java</span><span>RMI</span><span>OOP</span>
+              </div>
             </div>
             <div class="project-arrow">↗</div>
           </article>
@@ -297,7 +448,9 @@
                 Simulation project focused on concurrency, threads, synchronization
                 and object-oriented software design.
               </p>
-              <div class="project-tech"><span>Java</span><span>Threads</span><span>OOP</span></div>
+              <div class="project-tech">
+                <span>Java</span><span>Threads</span><span>OOP</span>
+              </div>
             </div>
             <div class="project-arrow">↗</div>
           </article>
@@ -311,7 +464,9 @@
                 Interactive calculator built with React, including expression handling,
                 user input states and a polished responsive interface.
               </p>
-              <div class="project-tech"><span>React</span><span>JavaScript</span><span>CSS</span></div>
+              <div class="project-tech">
+                <span>React</span><span>JavaScript</span><span>CSS</span>
+              </div>
             </div>
             <div class="project-arrow">↗</div>
           </article>
@@ -335,7 +490,10 @@
               <span>INTERNSHIP</span>
               <h3>IT Department Intern</h3>
               <h4>Valero Developments</h4>
-              <p>Supported the management of company hardware, software and network resources, and assisted with troubleshooting and day-to-day IT operations.</p>
+              <p>
+                Supported the management of company hardware, software and network resources,
+                and assisted with troubleshooting and day-to-day IT operations.
+              </p>
             </div>
           </div>
 
@@ -357,7 +515,10 @@
               <span>PROFESSIONAL DEVELOPMENT</span>
               <h3>Technical Training</h3>
               <h4>ITI · AITB · ITTI</h4>
-              <p>Software Testing training at ITI, Data Analysis training at AITB, and Digital Marketing training at ITTI.</p>
+              <p>
+                Software Testing training at ITI, Data Analysis training at AITB,
+                and Digital Marketing training at ITTI.
+              </p>
             </div>
           </div>
         </div>
@@ -378,13 +539,26 @@
 
         <div class="contact-links">
           <a href="mailto:kameliamahmoud5@gmail.com" class="contact-link">
-            <span>EMAIL</span><strong>kameliamahmoud5@gmail.com</strong><b>↗</b>
+            <span>EMAIL</span>
+            <strong>kameliamahmoud5@gmail.com</strong>
+            <b>↗</b>
           </a>
-          <a href="https://linkedin.com/in/kamelia-mahmoud-8410963b2" target="_blank" rel="noopener noreferrer" class="contact-link">
-            <span>LINKEDIN</span><strong>linkedin.com/in/kamelia-mahmoud-8410963b2</strong><b>↗</b>
+
+          <a
+            href="https://linkedin.com/in/kamelia-mahmoud-8410963b2"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-link"
+          >
+            <span>LINKEDIN</span>
+            <strong>linkedin.com/in/kamelia-mahmoud-8410963b2</strong>
+            <b>↗</b>
           </a>
+
           <div class="contact-link">
-            <span>LOCATION</span><strong>Cairo, Egypt</strong><b>⌖</b>
+            <span>LOCATION</span>
+            <strong>Cairo, Egypt</strong>
+            <b>⌖</b>
           </div>
         </div>
       </div>
